@@ -39,8 +39,8 @@ public class A2Q5 {
         new Wall(kw, 0, 2, Direction.EAST);
         //create first driveway
         int length1 = driveLength();
-        for (int i = 0; i < length1; i++) {
-            new Wall(kw, yPos, length1 + 3, Direction.NORTH);
+        for(int i = 0; i < length1; i++){
+            new Wall(kw, yPos, i + 3, Direction.NORTH);
         }
     }
 
