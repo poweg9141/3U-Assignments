@@ -6,7 +6,6 @@ package Assignment2;
 
 import becker.robots.City;
 import becker.robots.Direction;
-import becker.robots.IPredicate;
 import becker.robots.Robot;
 import becker.robots.Thing;
 import becker.robots.Wall;
