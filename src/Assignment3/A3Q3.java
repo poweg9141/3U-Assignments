@@ -20,7 +20,9 @@ public class A3Q3 {
     /**
      * @param args the command line arguments
      */
+    //boolean to be used by program, do not change
     private static boolean done;
+    //ints to set width and height
     static final int width = 5;
     static final int height = 4;
 
