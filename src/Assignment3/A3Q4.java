@@ -92,8 +92,9 @@ public class A3Q4 {
                 bob.move();
             }
             bob.turnLeft();
-            if(bob.frontIsClear())
+            if (bob.frontIsClear()) {
                 break escape;
+            }
             bob.turnAround();
         }
         bob.move();
