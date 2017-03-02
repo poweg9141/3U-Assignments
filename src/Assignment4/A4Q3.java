@@ -21,11 +21,15 @@ public class A4Q3 {
         Scanner input = new Scanner(System.in);
         //asks how many number to input
         System.out.println("How many numbers would you like to input?: ");
+        //stores their input as an int
         int count = input.nextInt();
+        //asks to enter the numbers
         System.out.println("Please enter those numbers on different lines: ");
         int[] nums = new int[count];
+        //for each number entered it stores it in an array
         for(int i = 0; i < count; i++)
             nums[i] = input.nextInt();
+        //prints out each number in the array separated by commas
         System.out.println("Your new numbers are: ");
         for(int i = 0; i < count; i++){
             System.out.print(nums[i] + ", ");
