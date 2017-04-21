@@ -4,8 +4,6 @@
  */
 package Assignment5;
 
-import java.util.Scanner;
-
 /**
  *
  * @author poweg9141
@@ -522,7 +520,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         //runs when the play button is pressed
-        
+
         //hides and disables yes, no, and play buttons to start new round
         play.setVisible(false);
         play.setEnabled(false);
@@ -558,11 +556,11 @@ public class GUI extends javax.swing.JFrame {
 
     private void goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goActionPerformed
         //runs when the go button is pressed
-        
+
         //makes the go button dissapear and disables it
         go.setVisible(false);
         go.setEnabled(false);
-        
+
         //updates remaining guesses to the display
         displayGuesses.setText("" + guess);
         //gets the word the player input
@@ -574,14 +572,14 @@ public class GUI extends javax.swing.JFrame {
         wordDisplay.setEditable(false);
         //resets hiddenWord before use (since it might be second round and word may have a value)
         hiddenWord = "";
-        
+
         //for every letter in the word adds a dash to the hiddenWord
         for (int i = 0; i < word.length(); i++) {
             hiddenWord += "-";
         }
         //displays the hidden word (all dashes at the moment)
         wordDisplay.setText(hiddenWord);
-        
+
         //sets comand box to the String returned from the method compileGuessesString
         //passes ints guess and guesser to compileGuessesString
         command.setText(compileGuessesString(guess, guesser));
@@ -594,7 +592,7 @@ public class GUI extends javax.swing.JFrame {
         //disables the q button and makes it dissapear since it has already been guessed
         Q.setVisible(false);
         Q.setEnabled(false);
-        
+
         /*
          * NOTE: THIS EXACT CODE IS REPEATED FOR BUTTONS W THROUGH M
          */
@@ -754,12 +752,12 @@ public class GUI extends javax.swing.JFrame {
     private void yesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesActionPerformed
         //runs when yes button is pressed
         //Yes button is only avaliable to press when choosing to replay game
-        
+
         //resets guesses
         guess = 5;
         //updates guesses display
         displayGuesses.setText("" + guess);
-        
+
         //re-enables all letter buttons
         Q.setVisible(true);
         Q.setEnabled(true);
@@ -821,7 +819,7 @@ public class GUI extends javax.swing.JFrame {
     private void noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noActionPerformed
         //runs when no button is pressed
         //No button is only avaliable to press when choosing to replay game
-        
+
         //exits the console and code
         System.exit(0);
     }//GEN-LAST:event_noActionPerformed
@@ -842,19 +840,14 @@ public class GUI extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new GUI().setVisible(true);
             }
@@ -872,10 +865,10 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private void letterGuessed(char letter) {
-        
+
         //initialized the right boolean used to determine if the player guessed a correct letter
         boolean right = false;
-        
+
         //checks if and letter in the word equals the guessed letter
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == letter) {
