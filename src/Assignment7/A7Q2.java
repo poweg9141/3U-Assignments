@@ -21,23 +21,24 @@ public class A7Q2 {
         //asks for and stores an integer mark
         System.out.println("Please enter a mark:");
         int marks = (int) in.nextDouble();
-        //prints out the return of the Grade mathod
-        System.out.println("The grade associated with it is " + Grade(marks));
+        //prints out the return of the examGrade mathod
+        System.out.println("The grade associated with it is " + examGrade(marks));
     }
-    
-    private static char Grade(int mark){
+
+    private static char examGrade(int mark) {
         //assigns a character based of a mark
         char grade = 'x';
-        if(mark < 50)
+        if (mark < 50) {
             grade = 'F';
-        else if(mark <= 59)
+        } else if (mark <= 59) {
             grade = 'D';
-        else if(mark <= 69)
+        } else if (mark <= 69) {
             grade = 'C';
-        else if(mark <= 79)
+        } else if (mark <= 79) {
             grade = 'B';
-        else if(mark >= 80)
+        } else if (mark >= 80) {
             grade = 'A';
+        }
         //returns that character
         return grade;
     }

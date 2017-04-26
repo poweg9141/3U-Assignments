@@ -21,14 +21,14 @@ public class A7Q1 {
         //asks for and stores a radius
         System.out.println("Please enter the radius of the circle:");
         double radius = in.nextDouble();
-        //prints out the returned number of the radius method
-        System.out.println("The area of the circle is " + Radius(radius));
-        
+        //prints out the returned number of the circleArea method
+        System.out.println("The area of the circle is " + circleArea(radius));
+
     }
-    
-    private static double Radius(double rad){
+
+    private static double circleArea(double rad) {
         //calculates and returns the radius
-        double area = Math.PI*Math.pow(rad, 2);
+        double area = Math.PI * Math.pow(rad, 2);
         return area;
     }
 }

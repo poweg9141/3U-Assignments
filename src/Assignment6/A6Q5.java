@@ -57,7 +57,7 @@ public class A6Q5 {
             //calculates and prints out the media
             int pos = (int) mid;
             double media = (marks[pos - 1] + marks[pos]) / 2;
-            System.out.printf("\nThe media is %s.\n", media);
+            System.out.printf("\nThe media is %s.\n", media + 0.5);
         } else {
             //if it has a remainder
             //calculates and prints out the medium
