@@ -63,7 +63,7 @@ public class A6Q5 {
             //calculates and prints out the medium
             double spot = mid - 0.5;
             double medium = marks[(int) spot];
-            System.out.printf("\nThe medium is %s.\n", medium);
+            System.out.printf("\nThe medium is %s\n", medium);
         }
     }
 }
